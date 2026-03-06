@@ -1,0 +1,12 @@
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# Sensitive Credentials
+.env
+housing.db
+
+# OS stuff
+.DS_Store
+Thumbs.db
