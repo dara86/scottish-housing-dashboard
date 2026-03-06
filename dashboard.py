@@ -93,7 +93,7 @@ year_range = st.sidebar.slider(
     max_value=max_year,
     value=(min_year, max_year), # Default to the full range
     step=1,
-    help="Slide to focus on specific timeframe (e.g. 2008 Crash )"
+    help="Slide to focus on specific timeframe (e.g. 2008 Housing Crash or 2019 Pandemic)"
 )
 
 st.sidebar.divider()
@@ -135,7 +135,7 @@ st.info(f"**Data only available from January 2005 -- {df['Date'].max().strftime(
 
 st.space()
 
-st.markdown("Check out my [Linkedin](https://www.linkedin.com/in/darragh-coyle/) and [Github](https://github.com/dara86) (+ source [code]())")          
+st.markdown("Check out my [Linkedin](https://www.linkedin.com/in/darragh-coyle/) and [Github](https://github.com/dara86) (+ source [code](https://github.com/dara86/scottish-housing-dashboard))")          
 
 st.divider()
 
