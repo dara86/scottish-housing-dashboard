@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 #config 
-st.set_page_config(page_title="Scotland Housing Price Trends", layout="wide", initial_sidebar_state='auto')
+st.set_page_config(page_title="Scotland Housing Price Trends", layout="wide", initial_sidebar_state='expanded')
 #colour palette
 custom = ["#1d9c43",'#ff7f00',"#4874EC","#d83c3f",'#984ea3','#ffff33']
 
