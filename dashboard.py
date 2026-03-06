@@ -3,9 +3,9 @@ import pandas as pd
 import plotly.express as px
 
 #config 
-st.set_page_config(page_title="Scotland Housing Price Trends", layout="wide", initial_sidebar_state='expanded')
+st.set_page_config(page_title="Scotland Housing Price Trends", layout="centered", initial_sidebar_state='expanded')
 #colour palette
-custom = ["#1d9c43",'#ff7f00',"#4874EC","#d83c3f",'#984ea3','#ffff33']
+custom = ["#1cd252","#ff2f00","#4874EC","#ffbb00",'#984ea3','#ffff33']
 
 
 # CSS for centering metric etc. (streamlit is left aligned by default)
@@ -174,6 +174,8 @@ st.divider()
 st.markdown(""" \
 ## Average Property Price Over Time""", text_alignment="center")
 
+st.info("**Use Local Authority Filter to adjust Region of interest**" , icon = "⬅️")
+
 st.space("medium")
 
 fig_price = px.line(
@@ -181,7 +183,7 @@ fig_price = px.line(
     x='Date', 
     y='AveragePrice', 
     color='RegionName',
-    template="plotly_white",
+    template="plotly_dark",
     color_discrete_sequence=custom,
     labels={"AveragePrice": "Price (£)",
             "RegionName":"Region"}
@@ -305,6 +307,9 @@ st.header("New Builds vs. Existing Properties", text_alignment = "center")
 st.markdown("Hover over to see 'Percentage Difference' between Newly-built properties and Existing properties", text_alignment='center')
 
 
+st.space("medium")
+
+
 # calculate the % difference (premium) for new property vs. old
 # done before melting
 df_calc = df_filtered.copy()
@@ -337,8 +342,8 @@ fig_vertical = px.line(
     y='Price',
     color='Market Segment',
     color_discrete_map={
-        "New Build": "#00ff55",       
-        "Existing Property": "#1c83e1"  
+        "New Build": "#fa0000",       
+        "Existing Property": "#0eb83c"  
     },
     facet_row='RegionName', 
     facet_row_spacing=0.12, # Increased spacing to make room for X-axis labels
@@ -366,10 +371,11 @@ fig_vertical.update_layout(
     legend=dict(
         orientation="h",    
         yanchor="bottom",    
-        y=1.1,              
+        y=1.05,              
         x=0.5,               
-        xanchor="center",    
-        title_text=""        
+        xanchor="left",    
+        title_text="" ,
+        font=dict(size=20)       
     ),
     
 )
