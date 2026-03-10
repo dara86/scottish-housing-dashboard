@@ -121,7 +121,7 @@ latest_df = df_filtered[df_filtered['Date'] == latest_date_in_range]
 st.markdown("""
 Hello! My name is Darragh Coyle. I’m an aspiring data scientist currently studying MSc in Big Data at University of Stirling :deciduous_tree:
             
-This dashboard is personal project to help visualise available data on Scotland Housing Prices across all Scottish Constituencies (as I still hold the optimistic view I will own property myself someday!)    
+This dashboard is a personal project to help visualise available data on Scotland Housing Prices across all Scottish Constituencies (as I still hold the optimistic view I will own property myself someday!)    
                
  
 **Data Source:** [UK Government Housing Price Index](https://www.gov.uk/government/statistical-data-sets/uk-house-price-index-data-downloads-december-2025)
